@@ -17,6 +17,17 @@ const init = async () => {
     await server.start();
     client.connect();
 
+    client.query(`
+        CREATE TABLE IF NOT EXISTS public.tasks (
+            id uuid NOT NULL DEFAULT uuid_generate_v4(),
+            state varchar NOT NULL,
+            description varchar NOT NULL,
+            created_at timestamp NOT NULL DEFAULT now(),
+            completed_at timestamp NULL,
+            CONSTRAINT "PK_8d12ff38fcc62aaba2cab748772" PRIMARY KEY (id)
+        );
+    `);
+
     server.route({
         method: 'GET',
         path: '/tasks',
