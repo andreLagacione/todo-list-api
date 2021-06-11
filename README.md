@@ -8,7 +8,7 @@
 - password: 'docker',
 - port: 5432,
 
-3- Rodar o comando yarn start com o terminal aberto na raiz do projeto, deverá aparecer a mensagem "Server runing on http://localhost:3333"\
+3- Rodar o comando yarn start com o terminal aberto na raiz do projeto, deverá aparecer a mensagem "Server runing on http://localhost:3333" \
 4- Subir a aplicação front-end ou testar as rotas via Postman ou Insomnia.
 
 # Rotas
